@@ -25,6 +25,15 @@
             padding: 24px 16px;
             text-align: center;
         }
+        .logo {
+            margin-bottom: 16px;
+        }
+        .logo img {
+            width: 150px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
         .container {
             max-width: 1000px;
             margin: 0 auto;
@@ -38,6 +47,21 @@
         }
         ul {
             padding-left: 20px;
+        }
+        .service-item {
+            margin-bottom: 20px;
+            padding: 16px;
+            background: #f8f9fa;
+            border-left: 4px solid var(--primary);
+            border-radius: 4px;
+        }
+        .service-item h3 {
+            color: var(--primary);
+            margin: 0 0 8px 0;
+        }
+        .service-item p {
+            margin: 0;
+            color: #555;
         }
         .contact p {
             margin: 6px 0;
@@ -58,25 +82,61 @@
 <body>
 
 <header>
+    <div class="logo">
+        <img src="keem-pro-logo.png" alt="KEEM PRO SOLUTION LTD Logo">
+    </div>
     <h1>KEEM PRO SOLUTION LTD</h1>
-    <p>Vehicle Solutions | Tracking Devices | GIS | Asset Management</p>
+    <p>INNOVATE • SOLVE</p>
 </header>
 
 <main class="container">
     <section aria-labelledby="about-heading">
         <h2 id="about-heading">About Us</h2>
-        <p>KEEM PRO SOLUTION LTD is a Nigerian company incorporated on April 27, 2024. We provide vehicle sales solutions, GPS tracking devices, asset management services, GIS solutions, and general merchandise to help businesses and individuals improve security and operational efficiency.</p>
+        <p>KEEM PRO SOLUTION LTD is a Nigerian company incorporated on April 27, 2024. We provide vehicle sales solutions, GPS tracking devices, asset management services, GIS solutions, and general merchandise supply with a commitment to innovation and excellence.</p>
     </section>
 
     <section aria-labelledby="services-heading">
         <h2 id="services-heading">Our Services</h2>
-        <ul>
-            <li>Vehicle Sales Solutions</li>
-            <li>GPS &amp; Vehicle Tracking Devices</li>
-            <li>Asset Management Services</li>
-            <li>Geographic Information System (GIS) Solutions</li>
-            <li>General Merchandise Supply</li>
-        </ul>
+        
+        <div class="service-item">
+            <h3>Internet of Things (IoT)</h3>
+            <p>Connect and manage intelligent devices seamlessly. Our IoT solutions enable real-time data collection, analysis, and automation across your enterprise infrastructure.</p>
+        </div>
+
+        <div class="service-item">
+            <h3>Machine2Machine (M2M)</h3>
+            <p>Enable direct communication between machines without human intervention. We provide robust M2M connectivity and protocols to streamline your operational efficiency.</p>
+        </div>
+
+        <div class="service-item">
+            <h3>E2E Integration across Mobility Services Platform</h3>
+            <p>Deliver end-to-end integration solutions across your mobility platform. Our comprehensive approach ensures seamless connectivity, data flow, and service orchestration.</p>
+        </div>
+
+        <div class="service-item">
+            <h3>Vehicle Sales Solutions</h3>
+            <p>Professional vehicle solutions tailored to your business needs.</p>
+        </div>
+
+        <div class="service-item">
+            <h3>GPS & Vehicle Tracking Devices</h3>
+            <p>Advanced tracking technology for real-time vehicle monitoring and management.</p>
+        </div>
+
+        <div class="service-item">
+            <h3>Asset Management Services</h3>
+            <p>Comprehensive asset tracking and management solutions for your organization.</p>
+        </div>
+
+        <div class="service-item">
+            <h3>Geographic Information System (GIS) Solutions</h3>
+            <p>Powerful GIS tools for spatial analysis and data visualization.</p>
+        </div>
+
+        <div class="service-item">
+            <h3>General Merchandise Supply</h3>
+            <p>Reliable supply of quality merchandise for various business needs.</p>
+        </div>
     </section>
 
     <section aria-labelledby="why-heading">

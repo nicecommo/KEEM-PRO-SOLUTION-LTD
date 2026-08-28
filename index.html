@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KEEM PRO SOLUTION LTD — INNOVATE • SOLVE</title>
+  <meta name="description" content="KEEM PRO SOLUTION LTD provides vehicle solutions, tracking devices, asset management, GIS services and general merchandise to help businesses operate smarter and more efficiently." />
+  <meta name="theme-color" content="#052a61" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --deep-blue:#052a61;      /* main deep brand color */
+      --bright-blue:#0a66ff;    /* accent bright blue */
+      --white:#ffffff;
+      --muted:#f4f7fb;
+      --dark:#111213;
+      --card-shadow: 0 8px 24px rgba(6,24,70,0.08);
+      --glass: rgba(255,255,255,0.06);
+      --radius:12px;
+      --max-width:1100px;
+    }
+    html{scroll-behavior:smooth;}
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:#0b1b2b;
+      background:linear-gradient(180deg,var(--muted),#fff);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+
+    /* Header / Nav */
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:999;
+      backdrop-filter: blur(6px);
+      background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.7));
+      border-bottom:1px solid rgba(6,24,70,0.04);
+      box-shadow: 0 4px 16px rgba(12,24,48,0.04);
+    }
+    .nav-inner{
+      max-width:var(--max-width);
+      margin:0 auto;
+      display:flex;
+      gap:24px;
+      align-items:center;
+      padding:10px 20px;
+      justify-content:space-between;
+    }
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .brand img{
+      height:48px;
+      width:auto;
+      display:block;
+    }
+    .brand h1{
+      font-family:Poppins, Inter, sans-serif;
+      font-size:16px;
+      margin:0;
+      color:var(--deep-blue);
+      letter-spacing:0.2px;
+    }
+    nav{
+      display:flex;
+      gap:18px;
+      align-items:center;
+    }
+    nav a{
+      text-decoration:none;
+      color:#0d1b2b;
+      font-weight:600;
+      padding:8px 10px;
+      border-radius:8px;
+    }
+    nav a:focus, nav a:hover{ background:rgba(10,102,255,0.06); outline:none; }
+    .cta-btn{
+      background:linear-gradient(90deg,var(--deep-blue),var(--bright-blue));
+      color:var(--white);
+      padding:10px 14px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:700;
+      box-shadow:0 6px 18px rgba(10,102,255,0.12);
+    }
+    .cta-btn:hover{ transform:translateY(-2px); }
+
+    /* mobile menu */
+    .menu-toggle{
+      display:none;
+      background:none;
+      border:0;
+      padding:8px;
+      border-radius:8px;
+    }
+
+    /* Hero */
+    .hero{
+      max-width:var(--max-width);
+      margin:36px auto 28px;
+      display:grid;
+      grid-template-columns: 1fr 420px;
+      gap:28px;
+      padding:30px;
+      align-items:center;
+    }
+    .hero-left{
+      padding:18px 6px;
+    }
+    .eyebrow{
+      display:inline-block;
+      background:linear-gradient(90deg,var(--deep-blue),var(--bright-blue));
+      color:var(--white);
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:700;
+    }
+    .hero h2{
+      font-family:Poppins, Inter, sans-serif;
+      font-size:34px;
+      margin:12px 0;
+      color:var(--deep-blue);
+      line-height:1.05;
+    }
+    .hero p.lead{
+      color:#243444;
+      font-size:16px;
+      margin:12px 0 20px;
+      max-width:68ch;
+    }
+    .hero .btns{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      padding:11px 14px;
+      border-radius:10px;
+      border:0;
+      font-weight:700;
+      cursor:pointer;
+      text-decoration:none;
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+    }
+    .btn-outline{
+      background:transparent;
+      color:var(--deep-blue);
+      border:2px solid rgba(5,42,97,0.06);
+      box-shadow:none;
+    }
+    .hero-right{
+      position:relative;
+      border-radius:16px;
+      background:linear-gradient(180deg, rgba(5,42,97,0.06), rgba(10,102,255,0.03));
+      padding:20px;
+      box-shadow:var(--card-shadow);
+      min-height:260px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .hero-art{
+      width:100%;
+      max-width:360px;
+      text-align:center;
+    }
+    .hero-art .logo-large{ display:block; margin:0 auto 12px; height:84px; }
+    .hero-art p{ color:#102334; font-size:14px }
+
+    /* sections */
+    section{ max-width:var(--max-width); margin:36px auto; padding:24px 20px; }
+    .card{
+      background:var(--white);
+      border-radius:var(--radius);
+      box-shadow:var(--card-shadow);
+      padding:18px;
+    }
+    .info-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:12px; }
+    .info-item{ background:linear-gradient(180deg,#fff,#fbfdff); padding:12px; border-radius:12px; border:1px solid rgba(6,24,70,0.04); }
+
+    /* services */
+    .services-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:16px; margin-top:16px; }
+    .service{
+      padding:18px;
+      border-radius:12px;
+      background:var(--white);
+      box-shadow:var(--card-shadow);
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+    }
+    .service .icon{
+      width:56px;height:56px;border-radius:10px;background:linear-gradient(180deg,var(--deep-blue),var(--bright-blue));
+      display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px;
+    }
+    .service h4{ margin:0 0 6px 0; font-size:16px; color:var(--deep-blue); }
+    .service p{ margin:0; color:#234; font-size:14px; }
+
+    /* features */
+    .features{ display:grid; grid-template-columns: repeat(4,1fr); gap:14px; margin-top:12px; }
+    .feature{ padding:16px; border-radius:12px; background:linear-gradient(180deg, #fff, #fbfeff); box-shadow:var(--card-shadow); text-align:center; }
+    .feature h5{ margin:8px 0 6px; font-size:15px; color:var(--deep-blue); }
+
+    /* approach */
+    .steps{ display:flex; gap:18px; align-items:stretch; flex-wrap:wrap; }
+    .step{ flex:1; min-width:180px; padding:18px; border-radius:12px; text-align:left; background:linear-gradient(180deg,#fff,#fbfdff); box-shadow:var(--card-shadow); }
+    .step .num{ font-size:22px; font-weight:700; color:var(--bright-blue); }
+
+    /* CTA */
+    .cta-strip{ background:linear-gradient(90deg,var(--deep-blue),var(--bright-blue)); color:var(--white); padding:36px 20px; border-radius:14px; text-align:center; margin:24px 0; box-shadow:0 10px 36px rgba(10,102,255,0.12); }
+    .cta-strip h3{ margin:0 0 8px; font-size:22px; font-family:Poppins,Inter, sans-serif; }
+
+    /* contact */
+    .contact-grid{ display:grid; grid-template-columns: 1fr 420px; gap:20px; align-items:start; }
+    .contact-card{ padding:18px; border-radius:12px; background:var(--white); box-shadow:var(--card-shadow); }
+    .contact-form label{ display:block; font-size:13px; margin:10px 0 6px; }
+    .contact-form input, .contact-form select, .contact-form textarea{
+      width:100%; padding:12px; border-radius:10px; border:1px solid #e6eef9; font-size:14px; background:#fff;
+    }
+    .contact-form textarea{ min-height:120px; resize:vertical; }
+    .map-placeholder{
+      border-radius:12px;
+      background:linear-gradient(180deg,#e8f0ff,#f8fbff);
+      padding:18px; text-align:center; box-shadow:var(--card-shadow);
+    }
+    .map-placeholder img{ max-width:100%; border-radius:8px; }
+
+    /* footer */
+    footer{
+      background:#071632; color:#dbe9ff; padding:28px 20px; margin-top:28px;
+    }
+    .footer-inner{ max-width:var(--max-width); margin:0 auto; display:flex; justify-content:space-between; gap:20px; align-items:flex-start; flex-wrap:wrap; }
+    .footer-nav a{ color:#dbe9ff; text-decoration:none; display:block; margin:6px 0; font-weight:600; }
+    .muted{ color:#627a9a; font-size:14px; }
+
+    /* small screens */
+    @media (max-width:980px){
+      .hero{ grid-template-columns:1fr; padding:20px }
+      .services-grid{ grid-template-columns: repeat(2,1fr); }
+      .features{ grid-template-columns: repeat(2,1fr); }
+      .contact-grid{ grid-template-columns: 1fr; }
+    }
+    @media (max-width:720px){
+      nav{ display:none; }
+      .menu-toggle{ display:inline-flex; }
+      .hero h2{ font-size:26px; }
+      .services-grid{ grid-template-columns: 1fr; }
+      .features{ grid-template-columns: 1fr; }
+      .info-grid{ grid-template-columns: 1fr; }
+    }
+
+    /* animated entrance */
+    .reveal{ opacity:0; transform:translateY(14px); transition:all 600ms cubic-bezier(.2,.9,.3,1); will-change:transform,opacity; }
+    .reveal.in-view{ opacity:1; transform:none; }
+
+    /* small utilities */
+    .muted-small{ color:#6b7b90; font-size:13px }
+    .text-center{ text-align:center }
+    .gap{ height:18px }
+    .small{ font-size:13px }
+    a.icon-link{ color:inherit; text-decoration:none; }
+  </style>
+</head>
+<body>
+  <header class="topbar" role="banner">
+    <div class="nav-inner">
+      <div class="brand" aria-label="KEEM PRO SOLUTION LTD">
+        <!-- Replace 'assets/keem-logo.png' with the uploaded official logo file (the second image you provided). Do NOT alter the logo. -->
+        <img src="assets/keem-logo.png" alt="KEEM PRO SOLUTION LTD logo" />
+        <div>
+          <h1>KEEM PRO SOLUTION LTD</h1>
+          <div class="muted-small">INNOVATE • SOLVE</div>
+        </div>
+      </div>
+
+      <nav role="navigation" aria-label="Main navigation" id="main-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#why">Why Choose Us</a>
+        <a href="#contact">Contact</a>
+        <a class="cta-btn" href="#contact">Get in Touch</a>
+      </nav>
+
+      <button class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" id="menu-toggle">
+        <!-- simple accessible hamburger -->
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="#052a61" stroke-width="1.6" stroke-linecap="round"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- mobile menu (hidden by default) -->
+    <div id="mobile-menu" style="display:none; padding:12px 20px; border-top:1px solid rgba(6,24,70,0.04); background:rgba(255,255,255,0.98);" aria-hidden="true">
+      <a href="#home" style="display:block;padding:10px 0">Home</a>
+      <a href="#about" style="display:block;padding:10px 0">About Us</a>
+      <a href="#services" style="display:block;padding:10px 0">Services</a>
+      <a href="#why" style="display:block;padding:10px 0">Why Choose Us</a>
+      <a href="#contact" style="display:block;padding:10px 0">Contact</a>
+      <a class="cta-btn" href="#contact" style="display:inline-block;margin-top:8px">Get in Touch</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero" aria-labelledby="hero-heading">
+      <div class="hero-left">
+        <span class="eyebrow">INNOVATE • SOLVE</span>
+        <h2 id="hero-heading" class="reveal">Innovative Solutions. Smarter Business. Better Results.</h2>
+        <p class="lead reveal">KEEM PRO SOLUTION LTD provides reliable vehicle solutions, tracking devices, asset management, GIS services and general merchandise solutions designed to help individuals and businesses operate smarter and more efficiently.</p>
+        <div class="btns reveal">
+          <a class="btn cta-btn" href="#services">Explore Our Services</a>
+          <a class="btn btn-outline" href="#contact">Contact Us</a>
+        </div>
+      </div>
+
+      <aside class="hero-right reveal" aria-hidden="false">
+        <div class="hero-art">
+          <!-- Display logo prominently here too -->
+          <img class="logo-large" src="assets/keem-logo.png" alt="KEEM PRO SOLUTION LTD logo" />
+          <p class="small muted-small">Professional technology, vehicle solutions, tracking, asset management and GIS services in Nigeria.</p>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="card reveal">
+        <h3 id="about-heading">About KEEM PRO SOLUTION LTD</h3>
+        <p>
+          KEEM PRO SOLUTION LTD is a Nigerian private company focused on providing practical and innovative solutions across vehicle solutions, tracking technology, asset management, Geographic Information Systems (GIS) and general merchandise. We combine modern technology and proven processes to deliver dependable, customer-centric solutions.
+        </p>
+
+        <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:16px">
+          <div class="contact-card" style="min-width:260px; flex:1">
+            <strong>Company Information</strong>
+            <div style="height:8px"></div>
+            <div class="small"><strong>Company:</strong> KEEM PRO SOLUTION LTD</div>
+            <div class="small"><strong>Registration No.:</strong> 7468712</div>
+            <div class="small"><strong>Company Type:</strong> Private Company Limited by Shares</div>
+            <div class="small"><strong>Status:</strong> Active</div>
+            <div class="small"><strong>Location:</strong> Lagos State, Nigeria</div>
+            <div style="height:8px"></div>
+            <p class="muted-small small">Our goal is to innovate, solve real-world problems and provide dependable solutions that create value for our customers.</p>
+          </div>
+
+          <div class="card" style="flex:2; min-width:280px">
+            <strong>Business Activities</strong>
+            <ul style="margin:10px 0 0 18px">
+              <li>Sales of vehicle solutions</li>
+              <li>Tracking devices</li>
+              <li>Asset management</li>
+              <li>Geographic Information Systems (GIS)</li>
+              <li>General merchandise</li>
+            </ul>
+            <div style="height:8px"></div>
+            <div class="small muted-small">Registered Address: 15, Ago Palaceway, Okota, Lagos State, Nigeria — Registered Date: April 27, 2024</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" aria-labelledby="services-heading">
+      <div class="reveal">
+        <h3 id="services-heading">Our Services</h3>
+        <p class="muted-small">Solutions designed to help you manage assets, vehicles and location data with confidence.</p>
+
+        <div class="services-grid" style="margin-top:14px">
+          <article class="service reveal" aria-labelledby="svc-vehicle">
+            <div class="icon" aria-hidden="true">V</div>
+            <div>
+              <h4 id="svc-vehicle">Vehicle Solutions</h4>
+              <p>Solutions to help manage, monitor and improve vehicle operations for individuals and businesses.</p>
+            </div>
+          </article>
+
+          <article class="service reveal" aria-labelledby="svc-tracking">
+            <div class="icon" aria-hidden="true">T</div>
+            <div>
+              <h4 id="svc-tracking">Tracking Devices</h4>
+              <p>Vehicle and asset tracking solutions designed to improve visibility, monitoring and security.</p>
+            </div>
+          </article>
+
+          <article class="service reveal" aria-labelledby="svc-asset">
+            <div class="icon" aria-hidden="true">A</div>
+            <div>
+              <h4 id="svc-asset">Asset Management</h4>
+              <p>Monitor, manage and optimize your valuable business assets with practical tools and services.</p>
+            </div>
+          </article>
+
+          <article class="service reveal" aria-labelledby="svc-gis">
+            <div class="icon" aria-hidden="true">G</div>
+            <div>
+              <h4 id="svc-gis">GIS Solutions</h4>
+              <p>Geographic Information System services for mapping, location analysis and data management.</p>
+            </div>
+          </article>
+
+          <article class="service reveal" aria-labelledby="svc-merch">
+            <div class="icon" aria-hidden="true">M</div>
+            <div>
+              <h4 id="svc-merch">General Merchandise</h4>
+              <p>A range of products and merchandise tailored to meet customer and business needs.</p>
+            </div>
+          </article>
+        </div>
+
+        <div style="margin-top:18px">
+          <a class="btn cta-btn" href="#contact">Contact Us to Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section id="why" aria-labelledby="why-heading">
+      <div class="card reveal">
+        <h3 id="why-heading">Why Choose KEEM PRO SOLUTION LTD?</h3>
+        <div class="features" style="margin-top:12px">
+          <div class="feature">
+            <div style="font-size:28px; font-weight:700; color:var(--bright-blue)">💡</div>
+            <h5>Innovation</h5>
+            <p class="small muted-small">We look for smarter and more effective ways to solve problems.</p>
+          </div>
+
+          <div class="feature">
+            <div style="font-size:28px; font-weight:700; color:var(--bright-blue)">🛡️</div>
+            <h5>Reliability</h5>
+            <p class="small muted-small">We focus on dependable solutions and professional service.</p>
+          </div>
+
+          <div class="feature">
+            <div style="font-size:28px; font-weight:700; color:var(--bright-blue)">🤝</div>
+            <h5>Customer Focus</h5>
+            <p class="small muted-small">We put our customers' needs at the centre of our solutions.</p>
+          </div>
+
+          <div class="feature">
+            <div style="font-size:28px; font-weight:700; color:var(--bright-blue)">⚙️</div>
+            <h5>Technology Driven</h5>
+            <p class="small muted-small">We leverage modern technology to deliver practical solutions.</p>
+          </div>
+
+          <div class="feature">
+            <div style="font-size:28px; font-weight:700; color:var(--bright-blue)">🎯</div>
+            <h5>Professional Service</h5>
+            <p class="small muted-small">We aim to provide quality service and build lasting business relationships.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPROACH -->
+    <section aria-labelledby="approach-heading">
+      <div class="reveal card">
+        <h3 id="approach-heading">Our Approach</h3>
+        <div class="steps" style="margin-top:12px">
+          <div class="step">
+            <div class="num">01 — Understand</div>
+            <p class="small muted-small">We listen to the customer's needs and identify core challenges.</p>
+          </div>
+          <div class="step">
+            <div class="num">02 — Innovate</div>
+            <p class="small muted-small">We design or source the right solution using modern practices and tech.</p>
+          </div>
+          <div class="step">
+            <div class="num">03 — Solve</div>
+            <p class="small muted-small">We deliver practical, dependable solutions that create results.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:14px; text-align:center;">
+          <strong style="font-family:Poppins,Inter;">INNOVATE • SOLVE</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA STRIP -->
+    <section class="cta-strip reveal" aria-labelledby="cta-heading">
+      <h3 id="cta-heading">Let’s Find the Right Solution for You</h3>
+      <p>Whether you need vehicle solutions, tracking devices, asset management, GIS services or general merchandise, KEEM PRO SOLUTION LTD is ready to help.</p>
+      <div style="margin-top:14px">
+        <a class="btn" href="#contact" style="background:rgba(255,255,255,0.12); color:#fff; padding:10px 14px; border-radius:10px; font-weight:700; text-decoration:none;">Contact Us</a>
+        <a class="btn" href="mailto:ADESHIF@GMAIL.COM" style="background:rgba(255,255,255,0.18); color:#fff; padding:10px 14px; border-radius:10px; text-decoration:none;">Send an Email</a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <h3 id="contact-heading">Contact KEEM PRO SOLUTION LTD</h3>
+      <div class="contact-grid reveal">
+        <div class="contact-card">
+          <p><strong>📍 Address:</strong> 15, Ago Palaceway, Okota, Lagos State, Nigeria</p>
+          <p><strong>✉️ Email:</strong> <a href="mailto:ADESHIF@GMAIL.COM">ADESHIF@GMAIL.COM</a></p>
+
+          <form class="contact-form" id="contact-form" onsubmit="return handleContactSubmit(event)" aria-label="Contact form">
+            <label for="fullname">Full Name</label>
+            <input id="fullname" name="fullname" type="text" required placeholder="Your full name" />
+
+            <label for="email">Email Address</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com" />
+
+            <label for="phone">Phone Number</label>
+            <input id="phone" name="phone" type="tel" placeholder="Optional" />
+
+            <label for="service">Service Required</label>
+            <select id="service" name="service" required>
+              <option value="">Choose a service</option>
+              <option>Vehicle Solutions</option>
+              <option>Tracking Devices</option>
+              <option>Asset Management</option>
+              <option>GIS Solutions</option>
+              <option>General Merchandise</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us a bit about your requirements" required></textarea>
+
+            <div style="margin-top:12px">
+              <!-- The form will open the user's email client with the collected content to send to the company's email. -->
+              <button type="submit" class="btn cta-btn">Send Message</button>
+            </div>
+          </form>
+        </div>
+
+        <div>
+          <div class="map-placeholder">
+            <h4 style="margin-top:0">Location</h4>
+            <p class="muted-small">Okota, Lagos — Map placeholder</p>
+            <!-- If you prefer an embedded map later, replace this placeholder with an iframe embed from Google Maps. -->
+            <svg width="100%" height="180" viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map placeholder">
+              <rect width="600" height="180" rx="12" fill="#e8f0ff"/>
+              <g transform="translate(20,12)" fill="#b6d2ff" opacity="0.9">
+                <rect x="0" y="0" width="560" height="156" rx="10" />
+              </g>
+              <g transform="translate(40,22)" fill="#0a66ff">
+                <circle cx="80" cy="70" r="8"/>
+                <rect x="120" y="40" width="260" height="6" rx="3"/>
+                <rect x="120" y="70" width="180" height="6" rx="3"/>
+                <rect x="120" y="100" width="120" height="6" rx="3"/>
+              </g>
+              <text x="36" y="156" font-family="Inter, sans-serif" font-size="12" fill="#32568a">Map placeholder — <a href="https://www.google.com/maps/search/?api=1&query=15,+Ago+Palaceway,+Okota,+Lagos+State,+Nigeria" style="color:#0a66ff">Open in Google Maps</a></text>
+            </svg>
+            <div style="height:10px"></div>
+            <a href="https://www.google.com/maps/search/?api=1&query=15,+Ago+Palaceway,+Okota,+Lagos+State,+Nigeria" target="_blank" rel="noopener" class="small">Open location in Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <div>
+        <img src="assets/keem-logo.png" alt="KEEM PRO SOLUTION LTD logo" style="height:44px"/>
+        <div style="height:6px"></div>
+        <div style="font-weight:700">KEEM PRO SOLUTION LTD</div>
+        <div class="muted-small">INNOVATE • SOLVE</div>
+        <div style="height:8px"></div>
+        <div class="muted">Providing innovative solutions in vehicle solutions, tracking, asset management, GIS and general merchandise.</div>
+      </div>
+
+      <div class="footer-nav">
+        <strong>Navigation</strong>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div style="min-width:220px; text-align:right">
+        <div>© 2026 KEEM PRO SOLUTION LTD. All Rights Reserved.</div>
+        <div class="muted-small" style="margin-top:8px">Registered: 7468712 — Private Company Limited by Shares</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const toggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    toggle && toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.style.display = expanded ? 'none' : 'block';
+      mobileMenu.setAttribute('aria-hidden', expanded ? 'true' : 'false');
+    });
+
+    // Simple Reveal on scroll using IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) e.target.classList.add('in-view');
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Highlight nav link on scroll (basic)
+    const sections = document.querySelectorAll('main section[id]');
+    const navLinks = document.querySelectorAll('nav a');
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const id = entry.target.getAttribute('id');
+        const link = document.querySelector('nav a[href="#' + id + '"]');
+        if(entry.isIntersecting){
+          navLinks.forEach(l => l.classList.remove('active'));
+          link && link.classList.add('active');
+        }
+      });
+    }, { threshold: 0.36 });
+
+    sections.forEach(s => sectionObserver.observe(s));
+
+    // Contact form: open user's mail client with composed mailto (no server)
+    function handleContactSubmit(e){
+      e.preventDefault();
+      const form = e.target;
+      const fullname = encodeURIComponent(form.fullname.value.trim());
+      const email = encodeURIComponent(form.email.value.trim());
+      const phone = encodeURIComponent(form.phone.value.trim());
+      const service = encodeURIComponent(form.service.value);
+      const message = encodeURIComponent(form.message.value.trim());
+
+      if(!fullname || !email || !service || !message){
+        alert('Please fill in the required fields.');
+        return false;
+      }
+
+      const subject = encodeURIComponent('Website Contact: ' + service + ' — ' + fullname);
+      const bodyLines = [
+        'Name: ' + decodeURIComponent(fullname),
+        'Email: ' + decodeURIComponent(email),
+        phone ? ('Phone: ' + decodeURIComponent(phone)) : '',
+        'Service Required: ' + decodeURIComponent(service),
+        '',
+        'Message:',
+        decodeURIComponent(message)
+      ].filter(Boolean).join('%0D%0A');
+
+      const mailto = 'mailto:ADESHIF@GMAIL.COM?subject=' + subject + '&body=' + encodeURIComponent(bodyLines);
+      // Open user's default mail client
+      window.location.href = mailto;
+      return false;
+    }
+
+    // Accessibility: close mobile menu on link click
+    document.querySelectorAll('#mobile-menu a').forEach(a => a.addEventListener('click', () => {
+      mobileMenu.style.display = 'none';
+      toggle.setAttribute('aria-expanded','false');
+      mobileMenu.setAttribute('aria-hidden','true');
+    }));
+
+    // Make all anchor buttons keyboard-friendly - simple focus styles are provided by :focus in browser, but ensure click handlers
+    document.querySelectorAll('a').forEach(a => {
+      a.addEventListener('keydown', (ev) => {
+        if(ev.key === 'Enter') a.click();
+      });
+    });
+  </script>
+</body>
+</html>
